@@ -519,7 +519,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="process-badges">
-                <div class="badge secure">
+                <!--<div class="badge secure">
                     <span>100% Safe & Secure</span>
                 </div>
                 <div class="badge experts">
@@ -527,7 +527,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="badge assistance">
                     <span>Complete assistance</span>
-                </div>
+                </div>-->
                 <div class="badge updates">
                     <span>Regular status updates</span>
                 </div>

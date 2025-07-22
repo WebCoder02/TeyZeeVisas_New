@@ -96,7 +96,7 @@
             </div>
         </div>
     </section>
-    <!-- <section class="document-checklist"> -->
+    <section class="document-checklist"> 
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
@@ -624,15 +624,20 @@
                 </div>
 
                 <div class="process-badges">
-                    <div class="badge secure">
-                        <span>100% Safe & Secure</span>
-                    </div>
-                    <div class="badge experts">
-                        <span>Visa Experts + AI Assisted</span>
-                    </div>
-                    <div class="badge assistance">
-                        <span>Complete assistance</span>
-                    </div>
+                    <!-- <div class="process-badges">
+    <div class="badge secure">
+        <span>100% Safe & Secure</span>
+    </div>
+    <div class="badge experts">
+        <span>Visa Experts + AI Assisted</span>
+    </div>
+    <div class="badge assistance">
+        <span>Complete assistance</span>
+    </div>
+    <div class="badge updates">
+        <span>Regular status updates</span>
+    </div>
+</div> -->
                     <div class="badge updates">
                         <span>Regular status updates</span>
                     </div>
