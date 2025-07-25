@@ -77,11 +77,11 @@
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=france&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="/php/payment.php?country=France_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=france" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=France_Customer" class="doc-link">Login</a>
                             </p>
                         <?php endif; ?>
                     </td>
@@ -184,6 +184,16 @@
                         <!-- Special links for logged-in users -->
                         <a href="https://france-visas.gouv.fr/en/india">Download Application Form</a>
                         <a href="https://france-visas.gouv.fr/documents/d/france-visas/fv_com_tutoriel_portugais">Download Document Checklist</a>
+                        <?php else: ?>
+                            <p>
+                                If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
+                                To <strong>Register</strong>, please click the Check Eligibility button:<br>
+                                <a href="/php/payment.php?country=France_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
+                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                After registration, you will receive your User ID and password on your registered Email ID.<br>
+                                If you have already registered on TeyzeeVisas, please login:<br>
+                                <a href="/php/login.php?country=France_Customer" class="doc-link">Login</a>
+                            </p>
                         <?php endif; ?></td>
                 </tr>
                 <tr>

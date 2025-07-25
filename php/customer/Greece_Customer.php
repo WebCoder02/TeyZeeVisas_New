@@ -57,11 +57,11 @@
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=greece&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="/php/payment.php?country=Greece_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=greece" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=Greece_Customer" class="doc-link">Login</a>
                             </p>
                         <?php endif; ?>
                     </td>
@@ -290,11 +290,11 @@ event of repatriation) and ensure that he/ she boards the ship.<br/>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=greece&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="/php/payment.php?country=Greece_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=greece" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=Greece_Customer" class="doc-link">Login</a>
                             </p>
                         <?php endif; ?></td>
                 </tr>

@@ -99,7 +99,7 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="../php/Turkey_Customer.php" class="check-btn">Download Documents</a>
+                <a href="/php/Turkey_Customer.php" class="check-btn">Download Documents</a>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
 

@@ -98,7 +98,7 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="../php/Romania_Customer.php" class="check-btn">Download Documents</a>
+                <a href="/php/Romania_Customer.php" class="check-btn">Download Documents</a>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!-- <div class="label-container">
@@ -379,7 +379,7 @@
                         <h3>90 Euros per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=romania&amount=12599"><button class="start-btn">Apply Now</button></a>
+                    <a href="/payments/payment.php?country=romania&amount=4130"><button class="start-btn">Apply Now</button></a>
                 </div>
             </div>
 
@@ -422,7 +422,7 @@
                         <small>+₹499 Plus Tax</small>
                         <h3>90 Euros per adult</h3>
                     </div>
-                    <a href="/payments/payment.php?country=romania&amount=12599"><button class="start-btn">Apply Now</button></a>
+                    <a href="/payments/payment.php?country=romania&amount=4130"><button class="start-btn">Apply Now</button></a>
                 </div>
             </div>
 

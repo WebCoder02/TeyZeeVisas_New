@@ -57,11 +57,11 @@
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=china&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="/php/payment.php?country=China_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=china" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=China_Customer" class="doc-link">Login</a>
                             </p>
                         <?php endif; ?>
                 
@@ -137,11 +137,11 @@
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=china&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="/php/payment.php?country=China_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=china" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=China_Customer" class="doc-link">Login</a>
                             </p>
                         <?php endif; ?></td>
                 </tr>  
@@ -379,7 +379,7 @@
                      <a href="/html/greece_customer.html">Greece</a> •
                      <a href="/html/singapore_customer.html">Singapore</a> •
                      <a href="/html/turkey_customer.html">Turkey</a> •
-                     <a href="/html/china_customer.html">China</a> •
+                     <a href="/html/China_Customer.html">China</a> •
                      <a href="#">Russia</a> •
                      <a href="#">United Arab Emirates</a> •
                      <a href="#">Indonesia</a> •

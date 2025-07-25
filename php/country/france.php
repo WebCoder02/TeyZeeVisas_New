@@ -99,7 +99,7 @@
         <div class="container">
             <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="../php/France_Customer.php" class="check-btn">Download Documents</a>
+                <a href="/php/France_Customer.php" class="check-btn">Download Documents</a>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
                 <!-- <a href="France_Customer.php" target="_blank">Download Documents</a>
                 <h3>Get Access to Original Visa Form and Checklist</h3> -->
@@ -378,11 +378,13 @@
                     <div class="price">
                         <!-- add any tag -->
                         <p>Pay now</p>
-                        <small>+₹3500 Plus Tax</small>
+                        <strong><h5>₹3500 Plus Tax</h5></strong>
+                        <small>Visa fee payable at VFS</small>
                         <h3>90 Euros per adult</h3>
+                        
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=france&amount=12599"><button class="start-btn">Apply Now</button></a>
+                    <a href="/payments/payment.php?country=france&amount=4130"><button class="start-btn">Apply Now</button></a>
                 </div>
             </div>
 
@@ -420,12 +422,16 @@
                 </div>
 
                 <div class="visa-action">
-                    <div class="price">
+<div class="price">
+                        <!-- add any tag -->
                         <p>Pay now</p>
-                        <small>+₹3500 Plus Tax</small>
+                        <strong><h5>₹3500 Plus Tax</h5></strong>
+                        <small>Visa fee payable at VFS</small>
                         <h3>90 Euros per adult</h3>
+                        
+                        <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=france&amount=12599"><button class="start-btn">Apply Now</button></a>
+                    <a href="/payments/payment.php?country=france&amount=4130"><button class="start-btn">Apply Now</button></a>
                 </div>
             </div>
 

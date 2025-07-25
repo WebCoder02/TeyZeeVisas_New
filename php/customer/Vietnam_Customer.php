@@ -59,11 +59,11 @@
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=vietnam&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="/php/payment.php?country=Vietnam_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=vietnam" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=Vietnam_Customer" class="doc-link">Login</a>
                             </p>
                         <?php endif; ?>
               
@@ -98,11 +98,11 @@
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=vietnam&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="/php/payment.php?country=Vietnam_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=vietnam" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=Vietnam_Customer" class="doc-link">Login</a>
                             </p>
                             <?php endif; ?></td>
                 </tr>
