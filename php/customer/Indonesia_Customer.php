@@ -51,8 +51,8 @@
                         <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://kemlu.go.id/files-service/storage/childmenu/additional_file/17291570886710d7e0c2e4b_Visa_Application_Form.pdf">Download Application Form</a>
-                        <a href="https://www.hciottawa.gov.in/pdf/Checklist_and_Information_Booklet_for_Visa.pdf">Download Document Checklist</a>
+                        <a href="https://kemlu.go.id/files-service/storage/childmenu/additional_file/17291570886710d7e0c2e4b_Visa_Application_Form.pdf"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.hciottawa.gov.in/pdf/Checklist_and_Information_Booklet_for_Visa.pdf"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -92,8 +92,8 @@
                     <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://kemlu.go.id/files-service/storage/childmenu/additional_file/17291570886710d7e0c2e4b_Visa_Application_Form.pdf">Download Application Form</a>
-                        <a href="https://www.hciottawa.gov.in/pdf/Checklist_and_Information_Booklet_for_Visa.pdf">Download Document Checklist</a>
+                        <a href="https://kemlu.go.id/files-service/storage/childmenu/additional_file/17291570886710d7e0c2e4b_Visa_Application_Form.pdf"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.hciottawa.gov.in/pdf/Checklist_and_Information_Booklet_for_Visa.pdf"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

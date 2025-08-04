@@ -90,7 +90,16 @@
             <div class="eligibility-content">
                 <h2>Check your Visa Eligibility for 499 Rs only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day</p>
-                <a href="/payments/payment.php?country=romania&amount=499"><button class="check-btn">Check Eligibility - Pay ₹499</button></a>
+                <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'france',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));  ?> <a href="/payments/secure-checkout.php?token=<?php echo $token; ?>">
+    <button class="check-btn">Check Eligibility - Pay ₹499</button>
+</a>
             </div>
         </div>
     </section>
@@ -379,7 +388,11 @@
                         <h3>90 Euros per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=romania&amount=4130"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=romania&visa_type=tourist"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=romania&visa_type=tourist&redirect_to=/php/romania.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -422,7 +435,11 @@
                         <small>+₹499 Plus Tax</small>
                         <h3>90 Euros per adult</h3>
                     </div>
-                    <a href="/payments/payment.php?country=romania&amount=4130"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=romania&visa_type=business"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=romania&visa_type=business&redirect_to=/php/romania.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 

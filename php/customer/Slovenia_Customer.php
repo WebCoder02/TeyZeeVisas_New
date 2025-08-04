@@ -52,20 +52,21 @@
                     <td>2</td>
                     <td>1 application form duly completed, dated and signed by the applicant
                         <br>
-                        <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
+                        
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://www.gov.si/assets/ministrstva/MZEZ/Dokumenti/konzularne-zadeve/oddelek-za-vize/vloge-za-vize-januar-2020/Application-form-C-SI.pdf">Download Application Form</a>
-                        <a href="https://www.vfsglobal.com/one-pager/slovenia/india/english/pdf/checklist-for-short-stay-visa.pdf">Download Document Checklist</a>
+                        <a href="https://www.gov.si/assets/ministrstva/MZEZ/Dokumenti/konzularne-zadeve/oddelek-za-vize/vloge-za-vize-januar-2020/Application-form-C-SI.pdf" class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.vfsglobal.com/one-pager/slovenia/india/english/pdf/checklist-for-short-stay-visa.pdf" class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
+                            <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=Slovakia_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="https://teyzeevisas.com/php/payment.php?country=Slovakia_Customer&amount=499" class="doc-link-special">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Slovakia_Customer" class="doc-link">Login</a>
+                                <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Slovenia_Customer.php" class="doc-link-special">Login</a>
                             </p>
                         <?php endif; ?>
                     </td>
@@ -201,20 +202,21 @@
                 </tr>
                  <tr>
                         <td>Official Document Links </td>
-                        <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
+                        <td>
                             <?php if (isset($_SESSION['user_id'])): ?>
                             <!-- Special links for logged-in users -->
-                            <a href="https://www.gov.si/en/representations/embassy-new-delhi/visa-information/">Download Application Form</a>
-                            <a href="https://www.vfsglobal.com/one-pager/slovenia/india/english/pdf/checklist-for-short-stay-visa.pdf">Download Document Checklist</a>
+                            <a href="https://www.gov.si/en/representations/embassy-new-delhi/visa-information/" class="doc-link-special">Download Application Form</a>
+                            <a href="https://www.vfsglobal.com/one-pager/slovenia/india/english/pdf/checklist-for-short-stay-visa.pdf" class="doc-link-special">Download Document Checklist</a>
                             <?php else: ?>
+                                <span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=Slovakia_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="https://teyzeevisas.com/php/payment.php?country=Slovakia_Customer&amount=499" class="doc-link-special">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Slovakia_Customer" class="doc-link">Login</a>
+                                <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Slovenia_Customer.php" class="doc-link-special">Login</a>
                             </p>
                             <?php endif; ?></td>
                     </tr>
@@ -572,7 +574,7 @@
                     const templateName = templatePath.replace('.doc', '').replace(/_/g, ' ');
 
 
-                    const message = `Kindly provide the latest ${templateName} for my visa application. In case you have not paid TeyZee Visa Fees, please make the visa service fees payment and get the receipt number. Link to Visa Fees Page for Slovenia - https://teyzee.com/France-visa-fees; please type the 7 digit receipt no in your next whatsapp message to us`;
+                    const message = `Kindly provide the latest ${templateName} for my visa application. In case you have not paid TeyZee Visa Fees, please make the visa service fees payment and get the receipt number. Link to Visa Fees Page for Slovenia - https://teyzee.com/slovenia.php; please type the 7 digit receipt no in your next whatsapp message to us`;
 
 
                     const encodedMessage = encodeURIComponent(message);

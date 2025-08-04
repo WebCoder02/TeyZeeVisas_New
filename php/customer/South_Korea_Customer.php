@@ -51,8 +51,8 @@
                         <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1">Download Application Form</a>
-                        <a href="https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1">Download Document Checklist</a>
+                        <a href="https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1"class="doc-link-special">Download Application Form</a>
+                        <a href="https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -89,8 +89,8 @@
                         <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                             <?php if (isset($_SESSION['user_id'])): ?>
                             <!-- Special links for logged-in users -->
-                            <a href="https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1">Download Application Form</a>
-                            <a href="https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1">Download Document Checklist</a>
+                            <a href="https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1"class="doc-link-special">Download Application Form</a>
+                            <a href="https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1"class="doc-link-special">Download Document Checklist</a>
                             <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

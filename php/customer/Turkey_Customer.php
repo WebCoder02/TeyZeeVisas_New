@@ -49,8 +49,8 @@
                     <td><span class="special-doc">Login to see the Tourist Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://newdelhi-emb.mfa.gov.tr/Mission/ShowAnnouncement/361514">Download Application Form</a>
-                        <a href="http://www.evisa.gov.tr/en/status/">Download Document Checklist</a>
+                        <a href="https://newdelhi-emb.mfa.gov.tr/Mission/ShowAnnouncement/361514"class="doc-link-special">Download Application Form</a>
+                        <a href="http://www.evisa.gov.tr/en/status/"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -87,8 +87,8 @@
                     <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://newdelhi-emb.mfa.gov.tr/Mission/ShowAnnouncement/361514">Download Application Form</a>
-                        <a href="http://www.evisa.gov.tr/en/status/">Download Document Checklist</a>
+                        <a href="https://newdelhi-emb.mfa.gov.tr/Mission/ShowAnnouncement/361514"class="doc-link-special">Download Application Form</a>
+                        <a href="http://www.evisa.gov.tr/en/status/"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

@@ -51,8 +51,8 @@
                         <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://www.immd.gov.hk/eng/services/index.html#tab_a_1">Download Application Form</a>
-                        <a href="https://www.immd.gov.hk/eng/service/travel_document/Application_for_HKSAR_Document_of_Identity_for_Visa_Purposes.html#a&secondTab">Download Document Checklist</a>
+                        <a href="https://www.immd.gov.hk/eng/services/index.html#tab_a_1"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.immd.gov.hk/eng/service/travel_document/Application_for_HKSAR_Document_of_Identity_for_Visa_Purposes.html#a&secondTab"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -89,8 +89,8 @@
                     <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://www.immd.gov.hk/eng/services/index.html#tab_a_1">Download Application Form</a>
-                        <a href="https://www.immd.gov.hk/eng/service/travel_document/Application_for_HKSAR_Document_of_Identity_for_Visa_Purposes.html#a&secondTab">Download Document Checklist</a>
+                        <a href="https://www.immd.gov.hk/eng/services/index.html#tab_a_1"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.immd.gov.hk/eng/service/travel_document/Application_for_HKSAR_Document_of_Identity_for_Visa_Purposes.html#a&secondTab"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

@@ -49,20 +49,21 @@
                         <td>Completed and signed visa application form by the applicant.<br>
                             <strong>Note:</strong> For minors, must be signed by a legal guardian.<br>
                             If applicable, include authorization for a third person.<br>
-                            <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
+                            
                             <?php if (isset($_SESSION['user_id'])): ?>
                             <!-- Special links for logged-in users -->
-                            <a href="https://www.evisa.gov.ge/GeoVisa/en/VisaApp">Download Application Form</a>
-                            <a href="https://www.netherlandsworldwide.nl/binaries/content/assets/pdfs-engels/checklist-visa-application/georgia/tourism.pdf">Download Document Checklist</a>
+                            <a href="https://www.evisa.gov.ge/GeoVisa/en/VisaApp"class="doc-link-special">Download Application Form</a>
+                            <a href="https://www.netherlandsworldwide.nl/binaries/content/assets/pdfs-engels/checklist-visa-application/georgia/tourism.pdf"class="doc-link-special">Download Document Checklist</a>
                             <?php else: ?>
+                            <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=Georgia_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="https://teyzeevisas.com/php/payment.php?country=Georgia_Customer&amount=499" class="doc-link-special">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Georgia_Customer" class="doc-link">Login</a>
+                                <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Georgia_Customer.php" class="doc-link-special">Login</a>
                             </p>
                             <?php endif; ?>
 
@@ -90,20 +91,20 @@
                 </tr>
                 <tr>
                     <td>Official Document Links </td>
-                    <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
+                    <td>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://www.evisa.gov.ge/GeoVisa/en/VisaApp">Download Application Form</a>
-                        <a href="https://www.netherlandsworldwide.nl/binaries/content/assets/pdfs-engels/checklist-visa-application/georgia/tourism.pdf">Download Document Checklist</a>
-                        <?php else: ?>
+                        <a href="https://www.evisa.gov.ge/GeoVisa/en/VisaApp"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.netherlandsworldwide.nl/binaries/content/assets/pdfs-engels/checklist-visa-application/georgia/tourism.pdf"class="doc-link-special">Download Document Checklist</a>
+                        <?php else: ?><span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=Georgia_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="https://teyzeevisas.com/php/payment.php?country=Georgia_Customer&amount=499" class="doc-link-special">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Georgia_Customer" class="doc-link">Login</a>
+                                <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Georgia_Customer.php" class="doc-link-special">Login</a>
                             </p>
                         <?php endif; ?></td>
                 </tr>
@@ -372,7 +373,7 @@
                     const templateName = templatePath.replace('.doc', '').replace(/_/g, ' ');
 
 
-                    const message = `Kindly provide the latest ${templateName} for my visa application. In case you have not paid TeyZee Visa Fees, please make the visa service fees payment and get the receipt number. Link to Visa Fees Page for Hong Kong- https://teyzee.com/georgia-visa-fees; please type the 7 digit receipt no in your next whatsapp message to us`;
+                    const message = `Kindly provide the latest ${templateName} for my visa application. In case you have not paid TeyZee Visa Fees, please make the visa service fees payment and get the receipt number. Link to Visa Fees Page for Georgia- https://teyzee.com/georgia.php; please type the 7 digit receipt no in your next whatsapp message to us`;
 
 
                     const encodedMessage = encodeURIComponent(message);

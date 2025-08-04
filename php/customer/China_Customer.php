@@ -51,8 +51,8 @@
                     <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                             <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://visaoffice.eu/media/uploads/document_examples/Order_forms/china/data_collect_form_china.pdf">Download Application Form</a>
-                        <a href="https://www.visaforchina.cn/YYC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/336247379642683392.html">Download Document Checklist</a>
+                        <a href="https://visaoffice.eu/media/uploads/document_examples/Order_forms/china/data_collect_form_china.pdf"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.visaforchina.cn/YYC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/336247379642683392.html"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -131,8 +131,8 @@
                     <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://visaoffice.eu/media/uploads/document_examples/Order_forms/china/data_collect_form_china.pdf">Download Application Form</a>
-                        <a href="https://www.visaforchina.cn/YYC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/336247379642683392.html">Download Document Checklist</a>
+                        <a href="https://visaoffice.eu/media/uploads/document_examples/Order_forms/china/data_collect_form_china.pdf"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.visaforchina.cn/YYC3_EN/qianzhengyewu/jichuzhishi/changjianwenti/336247379642683392.html"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

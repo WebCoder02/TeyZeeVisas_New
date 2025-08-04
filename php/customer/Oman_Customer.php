@@ -51,8 +51,8 @@
                     <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://www.fm.gov.om/citizens/visa-requirements/">Download Application Form</a>
-                        <a href="https://evisa.rop.gov.om/visa-eligibility?p_p_id=visawizard_WAR_visaeligibilitywizardportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_visawizard_WAR_visaeligibilitywizardportlet_myaction=selectedVisa">Download Document Checklist</a>
+                        <a href="https://www.fm.gov.om/citizens/visa-requirements/"class="doc-link-special">Download Application Form</a>
+                        <a href="https://evisa.rop.gov.om/visa-eligibility?p_p_id=visawizard_WAR_visaeligibilitywizardportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_visawizard_WAR_visaeligibilitywizardportlet_myaction=selectedVisa"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -92,8 +92,8 @@
                         <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                             <?php if (isset($_SESSION['user_id'])): ?>
                             <!-- Special links for logged-in users -->
-                            <a href="https://www.fm.gov.om/citizens/visa-requirements/">Download Application Form</a>
-                            <a href="https://evisa.rop.gov.om/visa-eligibility?p_p_id=visawizard_WAR_visaeligibilitywizardportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_visawizard_WAR_visaeligibilitywizardportlet_myaction=selectedVisa">Download Document Checklist</a>
+                            <a href="https://www.fm.gov.om/citizens/visa-requirements/"class="doc-link-special">Download Application Form</a>
+                            <a href="https://evisa.rop.gov.om/visa-eligibility?p_p_id=visawizard_WAR_visaeligibilitywizardportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_visawizard_WAR_visaeligibilitywizardportlet_myaction=selectedVisa"class="doc-link-special">Download Document Checklist</a>
                             <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

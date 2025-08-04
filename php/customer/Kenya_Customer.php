@@ -51,8 +51,8 @@
                             <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://evisa.go.ke/">Download Application Form</a>
-                        <a href="https://www.kenyaimmigration.org/faq/what-documents-do-i-need-at-the-airport-in-kenya?_gl=1*dhz6g3*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjwlMfABhCWARIsADGXdy90-v425odt6Za-T8XUDyCy2GEXPVIdVL8xpT6ZfUf9B09OXjr07awaAkdjEALw_wcB">Download Document Checklist</a>
+                        <a href="https://evisa.go.ke/"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.kenyaimmigration.org/faq/what-documents-do-i-need-at-the-airport-in-kenya?_gl=1*dhz6g3*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjwlMfABhCWARIsADGXdy90-v425odt6Za-T8XUDyCy2GEXPVIdVL8xpT6ZfUf9B09OXjr07awaAkdjEALw_wcB"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -93,8 +93,8 @@
                         <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                             <?php if (isset($_SESSION['user_id'])): ?>
                             <!-- Special links for logged-in users -->
-                            <a href="https://evisa.go.ke/">Download Application Form</a>
-                            <a href="https://www.kenyaimmigration.org/faq/what-documents-do-i-need-at-the-airport-in-kenya?_gl=1*dhz6g3*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjwlMfABhCWARIsADGXdy90-v425odt6Za-T8XUDyCy2GEXPVIdVL8xpT6ZfUf9B09OXjr07awaAkdjEALw_wcB">Download Document Checklist</a>
+                            <a href="https://evisa.go.ke/"class="doc-link-special">Download Application Form</a>
+                            <a href="https://www.kenyaimmigration.org/faq/what-documents-do-i-need-at-the-airport-in-kenya?_gl=1*dhz6g3*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjwlMfABhCWARIsADGXdy90-v425odt6Za-T8XUDyCy2GEXPVIdVL8xpT6ZfUf9B09OXjr07awaAkdjEALw_wcB"class="doc-link-special">Download Document Checklist</a>
                             <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

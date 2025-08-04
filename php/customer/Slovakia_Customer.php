@@ -48,20 +48,21 @@
                     <td>1</td>
                     <td>Visa application form duly completed and signed
                         <br>
-                        <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
+                        
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://www.mzv.sk/en/web/dilli-en/services/visa-application-forms">Download Application Form</a>
-                        <a href="https://www.vfsglobal.com/slovakia/uae/pdf/medical-visa-checklist-final.pdf">Download Document Checklist</a>
+                        <a href="https://www.mzv.sk/en/web/dilli-en/services/visa-application-forms" class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.vfsglobal.com/slovakia/uae/pdf/medical-visa-checklist-final.pdf" class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
+                            <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=Slovakia_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="https://teyzeevisas.com/php/payment.php?country=Slovakia_Customer&amount=499" class="doc-link-special">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Slovakia_Customer" class="doc-link">Login</a>
+                                <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Slovakia_Customer.php" class="doc-link-special">Login</a>
                             </p>
                         <?php endif; ?>
                     </td>
@@ -129,20 +130,21 @@
                 </tr>
                 <tr>
                         <td>Official Document Links </td>
-                        <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
+                        <td>
                             <?php if (isset($_SESSION['user_id'])): ?>
                             <!-- Special links for logged-in users -->
-                            <a href="https://www.schengenvisas.com/business-schengen-visa/">Download Application Form</a>
-                            <a href="https://www.vfsglobal.com/slovakia/uae/pdf/medical-visa-checklist-final.pdf">Download Document Checklist</a>
+                            <a href="https://www.schengenvisas.com/business-schengen-visa/" class="doc-link-special">Download Application Form</a>
+                            <a href="https://www.vfsglobal.com/slovakia/uae/pdf/medical-visa-checklist-final.pdf" class="doc-link-special">Download Document Checklist</a>
                             <?php else: ?>
+                                <span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="/php/payment.php?country=&amount=499" class="doc-link">Check Eligibility</a><br>
+                                <a href="https://teyzeevisas.com/php/payment.php?country=&amount=499" class="doc-link-special">Check Eligibility</a><br>
                                 Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Slovakia_Customer" class="doc-link">Login</a>
+                                <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Slovakia_Customer.php" class="doc-link-special">Login</a>
                             </p>
                             <?php endif; ?></td>
                     </tr>
@@ -500,7 +502,7 @@
                     const templateName = templatePath.replace('.doc', '').replace(/_/g, ' ');
 
 
-                    const message = `Kindly provide the latest ${templateName} for my visa application. In case you have not paid TeyZee Visa Fees, please make the visa service fees payment and get the receipt number. Link to Visa Fees Page for Slovakia  - https://teyzee.com/France-visa-fees; please type the 7 digit receipt no in your next whatsapp message to us`;
+                    const message = `Kindly provide the latest ${templateName} for my visa application. In case you have not paid TeyZee Visa Fees, please make the visa service fees payment and get the receipt number. Link to Visa Fees Page for Slovakia  - https://teyzee.com/slovakia.php; please type the 7 digit receipt no in your next whatsapp message to us`;
 
 
                     const encodedMessage = encodeURIComponent(message);

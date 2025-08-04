@@ -55,8 +55,8 @@
                             <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                             <?php if (isset($_SESSION['user_id'])): ?>
                             <!-- Special links for logged-in users -->
-                            <a href="http://admin.mfa.gov.eg/arabic/embassies/Egyptian_Embassy_India/Pages/Default.aspx">Download Application Form</a>
-                            <a href="https://www.egyptembassy.org/travel/visa-requirements/">Download Document Checklist</a>
+                            <a href="http://admin.mfa.gov.eg/arabic/embassies/Egyptian_Embassy_India/Pages/Default.aspx"class="doc-link-special">Download Application Form</a>
+                            <a href="https://www.egyptembassy.org/travel/visa-requirements/"class="doc-link-special">Download Document Checklist</a>
                             <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -129,8 +129,8 @@
                     <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="http://admin.mfa.gov.eg/arabic/embassies/Egyptian_Embassy_India/Pages/Default.aspx">Download Application Form</a>
-                        <a href="https://www.egyptembassy.org/travel/visa-requirements/">Download Document Checklist</a>
+                        <a href="http://admin.mfa.gov.eg/arabic/embassies/Egyptian_Embassy_India/Pages/Default.aspx"class="doc-link-special">Download Application Form</a>
+                        <a href="https://www.egyptembassy.org/travel/visa-requirements/"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

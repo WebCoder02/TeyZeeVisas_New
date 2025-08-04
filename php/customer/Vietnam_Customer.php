@@ -53,8 +53,8 @@
                 <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
                         <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
-                        <a href="https://evisa.gov.vn/">Download Application Form</a>
-                        <a href="https://evisa.gov.vn/instruction">Download Document Checklist</a>
+                        <a href="https://evisa.gov.vn/"class="doc-link-special">Download Application Form</a>
+                        <a href="https://evisa.gov.vn/instruction"class="doc-link-special">Download Document Checklist</a>
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
@@ -92,8 +92,8 @@
                         <td><span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
                             <?php if (isset($_SESSION['user_id'])): ?>
                             <!-- Special links for logged-in users -->
-                            <a href="https://evisa.gov.vn/">Download Application Form</a>
-                            <a href="https://evisa.gov.vn/instruction">Download Document Checklist</a>
+                            <a href="https://evisa.gov.vn/"class="doc-link-special">Download Application Form</a>
+                            <a href="https://evisa.gov.vn/instruction"class="doc-link-special">Download Document Checklist</a>
                             <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>

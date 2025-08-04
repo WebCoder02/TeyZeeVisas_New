@@ -103,7 +103,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="eligibility-content">
                 <h2>Check your Visa Eligibility for 499 Rs only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day</p>
-                <a href="/payments/payment.php?country=italy&amount=499"><button class="check-btn">Check Eligibility - Pay ₹499</button></a>
+                <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'france',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));  ?> <a href="/payments/secure-checkout.php?token=<?php echo $token; ?>">
+    <button class="check-btn">Check Eligibility - Pay ₹499</button>
+</a>
             </div>
         </div>
     </section>
@@ -393,7 +402,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=italy&amount=4130"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=italy&visa_type=tourist"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=italy&visa_type=tourist&redirect_to=/php/italy.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
     
@@ -440,7 +453,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=italy&amount=4130"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=italy&visa_type=business"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=italy&visa_type=business&redirect_to=/php/italy.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
             
