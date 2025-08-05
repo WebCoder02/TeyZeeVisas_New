@@ -105,7 +105,22 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=georgia&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+               <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'france',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));
+?>
+                <!-- ✅ FIXED: Eligibility Check Payment Link -->
+                <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=france&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/france.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=france&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -365,7 +380,11 @@
                 <div><strong>Visa Duration:</strong> 120 days from issue</div>
                 <div><strong>Length of Stay:</strong> Up to 30 days</div>
             </div>
-            <a href="/payments/payment.php?country=georgia&amount=2299"><button class="apply-button">Apply Now for $21 (₹1800 + ₹499)</button></a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+            <a href="/payments/payment.php?country=georgia&visa_type=tourist_single/multiple"><button class="apply-button">Apply Now for $21 (₹1800 + ₹499)</button></a>
+        <?php else: ?>
+            <a href="/payments/payment.php?country=georgia&visa_type=tourist_single/multiple&redirect_to=/php/georgia.php"><button class="apply-button">Apply Now for $21 (₹1800 + ₹499)</button></a>
+        <?php endif; ?>
             </div>
         </div>
     </section>

@@ -92,7 +92,22 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=hongKong&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+               <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'france',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));
+?>
+                <!-- ✅ FIXED: Eligibility Check Payment Link -->
+                <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=france&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/france.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=france&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -352,14 +367,18 @@
         <div><strong>Length of Stay:</strong> Up to 14 days</div>
         
        </div>
-      <a href="/payments/payment.php?country=hongKong&amount=499"><button class="apply-button">Apply Now for $0 (+₹499)</button></a>
+       <?php if (isset($_SESSION['user_id'])): ?>
+            <a href="/payments/payment.php?country=hong_kong&visa_type=tourist_single/multiple"><button class="apply-button">Apply Now for $0 (+ ₹499)</button></a>
+        <?php else: ?>
+            <a href="/payments/payment.php?country=hong_kong&visa_type=tourist_single/multiple&redirect_to=/php/hong_kong.php"><button class="apply-button">Apply Now for $0 ( + ₹499)</button></a>
+        <?php endif; ?>
         </div>
     </div>
     </section>
     
-   <section class="visa-types" id="business-visa">
+     <section class="visa-types">
         <div class="container">
-            <h2>Types of China Visa</h2>
+            <h2>Types of Hong Kong Visa</h2>
             <div class="visa-card" id="tourist-visa">
                 <div class="visa-info">
                     <div class="visa-type">
@@ -400,7 +419,11 @@
                         <h3>$34 per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=china&amount=4399"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=hong_kong&visa_type=tourist/business_single"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=hong_kong&visa_type=tourist/business_single&redirect_to=/php/hong_kong.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -444,7 +467,11 @@
                         <h3>51$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=china&amount=5899"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=hong_kong&visa_type=tourist/business_double"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=hong_kong&visa_type=tourist/business_double&redirect_to=/php/hong_kong.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>               
                 </div>
             </div>
             
@@ -488,11 +515,15 @@
                         <h3>70$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=china&amount=7399"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=hong_kong&visa_type=tourist/business_multiple_6months"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=hong_kong&visa_type=tourist/business_multiple_6months&redirect_to=/php/hong_kong.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
-            <div class="visa-card" id="#business-visa">
+            <div class="visa-card" id="#Business-visa">
                 <div class="visa-info">
                     <div class="visa-type">
                         <span class="heading">Tourist/Business</span>
@@ -532,7 +563,11 @@
                         <h3>103$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=china&amount=10299"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=hong_kong&visa_type=tourist/business_multiple_1year"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=hong_kong&visa_type=tourist/business_multiple_1year&redirect_to=/php/hong_kong.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -543,7 +578,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="process" id="visa-process">
         <div class="container">
