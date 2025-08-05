@@ -114,7 +114,12 @@ $token = base64_encode(json_encode([
         <div class="container">
             <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/France_Customer.php" class="check-btn">Download Documents</a>
+                <!-- ✅ FIXED: Document Download Link -->
+               <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/France_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=france&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
                 <!-- <a href="France_Customer.php" target="_blank">Download Documents</a>
                 <h3>Get Access to Original Visa Form and Checklist</h3> -->
