@@ -81,7 +81,22 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=china&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+               <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'china',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));
+?>
+                <!-- ✅ FIXED: Eligibility Check Payment Link -->
+                <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=china&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/china.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=china&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -89,7 +104,11 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/China_Customer.php" class="check-btn">Download Documents</a>
+                            <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/China_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=china&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
 
@@ -366,7 +385,11 @@
                         <h3>$34 per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=china&amount=4399"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=china&visa_type=tourist/business_single"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=china&visa_type=tourist/business_single&redirect_to=/php/china.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -410,7 +433,11 @@
                         <h3>51$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=china&amount=5899"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=china&visa_type=tourist/business_double"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=china&visa_type=tourist/business_double&redirect_to=/php/china.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>               
                 </div>
             </div>
             
@@ -454,7 +481,11 @@
                         <h3>70$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=china&amount=7399"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=china&visa_type=tourist/business_multiple_6months"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=china&visa_type=tourist/business_multiple_6months&redirect_to=/php/china.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -498,7 +529,11 @@
                         <h3>103$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=china&amount=10299"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=china&visa_type=tourist/business_multiple_1year"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=china&visa_type=tourist/business_multiple_1year&redirect_to=/php/china.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 

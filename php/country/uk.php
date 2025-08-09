@@ -92,7 +92,20 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=uk&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+                <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'uk',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));  ?> <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=uk&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/uk.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=uk&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
+
             </div>
         </div>
     </section>
@@ -100,7 +113,11 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/UK_Customer.php" class="check-btn">Download Documents</a>
+                <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/UK_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=uk&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!-- <div class="label-container">
@@ -383,7 +400,11 @@
                         <h3>178$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=uk&amount=19770"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=uk&visa_type=business_01"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uk&visa_type=business_01&redirect_to=/php/uk.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -427,7 +448,11 @@
                         <h3>665$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=uk&amount=61619"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=uk&visa_type=business_02"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uk&visa_type=business_02&redirect_to=/php/uk.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -471,7 +496,11 @@
                         <h3>1186$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=uk&amount=106469"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=uk&visa_type=business_03"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uk&visa_type=business_03&redirect_to=/php/uk.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -515,7 +544,11 @@
                         <h3>1,481$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=uk&amount=131840"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=uk&visa_type=business_04"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uk&visa_type=business_04&redirect_to=/php/uk.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 

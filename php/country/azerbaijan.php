@@ -92,7 +92,22 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=azerbaijan&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+                <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'azerbaijan',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));
+?>
+                <!-- ✅ FIXED: Eligibility Check Payment Link -->
+                <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=azerbaijan&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/azerbaijan.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=azerbaijan&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -100,7 +115,11 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/Azerbaijan_Customer.php" class="check-btn">Download Documents</a>
+                            <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/Azerbaijan_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=azerbaijan&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!-- <div class="label-container">
@@ -352,7 +371,11 @@
         <div><strong>Length of Stay:</strong> Up to 30 days</div>
         
       </div>
-      <a href="/payments/payment.php?country=azerbaijan&amount=2899"><button class="apply-button">Apply Now @ $29 (₹2400 + ₹499)</button></a>
+       <?php if (isset($_SESSION['user_id'])): ?>
+            <a href="/payments/payment.php?country=azerbaijan&visa_type=single_tourist_evisa"><button class="apply-button">Apply Now for $29 (₹2400 + ₹499)</button></a>
+        <?php else: ?>
+            <a href="/payments/payment.php?country=azerbaijan&visa_type=single_tourist_evisa&redirect_to=/php/azerbaijan.php"><button class="apply-button">Apply Now for $29 (₹2400 + ₹499)</button></a>
+        <?php endif; ?>
     </div>
 
     <div class="visa-cards">
@@ -363,7 +386,11 @@
         <div><strong>Visa Duration:</strong> 90 days from issue</div>
         <div><strong>Length of Stay:</strong> Up to 30 days</div>
       </div>
-      <a href="/payments/payment.php?country=azerbaijan&amount=6799"><button class="apply-button">Apply Now @ $75 (₹6300 + ₹499)  </button></a>
+       <?php if (isset($_SESSION['user_id'])): ?>
+            <a href="/payments/payment.php?country=azerbaijan&visa_type=express_tourist_evisa"><button class="apply-button">Apply Now for $75 (₹6300 + ₹499)</button></a>
+        <?php else: ?>
+            <a href="/payments/payment.php?country=azerbaijan&visa_type=express_tourist_evisa&redirect_to=/php/azerbaijan.php"><button class="apply-button">Apply Now for $75 (₹6300 + ₹499)</button></a>
+        <?php endif; ?>
     </div>
 
 
@@ -414,7 +441,11 @@
                         <h3>29$ per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=azerbaijan&amount=2999"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=azerbaijan&visa_type=tourist_sticker"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=azerbaijan&visa_type=tourist_sticker&redirect_to=/php/azerbaijan.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -457,7 +488,11 @@
                         <small>+₹499 Plus Tax</small>
                         <h3>69$ per adult</h3>
                     </div>
-                    <a href="/payments/payment.php?country=azerbaijan&amount=6419"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=azerbaijan&visa_type=business_sticker"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=azerbaijan&visa_type=business_sticker&redirect_to=/php/azerbaijan.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 

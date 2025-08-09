@@ -95,7 +95,7 @@
            <!-- Eligibility Check -->
 <?php 
 $token = base64_encode(json_encode([
-    'country' => 'france',
+    'country' => 'indonesia',
     'visa_type' => 'eligibility_check', 
     'amount' => 499,
     'timestamp' => time()
@@ -103,10 +103,10 @@ $token = base64_encode(json_encode([
 ?>
                 <!-- ✅ FIXED: Eligibility Check Payment Link -->
                 <?php if (isset($_SESSION['user_id'])): ?>
-    <a href="/payments/payment.php?country=france&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+    <a href="/payments/payment.php?country=indonesia&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
 <?php else: ?>
-    <p><small>Please <a href="/php/login.php?redirect_to=/php/france.php" class="login-link">login</a> to proceed with payment</small></p>
-    <a href="/payments/payment.php?country=france&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/indonesia.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=indonesia&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
 <?php endif; ?>
             </div>
         </div>
@@ -115,7 +115,11 @@ $token = base64_encode(json_encode([
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/Indonesia_Customer.php" class="check-btn">Download Documents</a>
+                            <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/Indonesia_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=indonesia&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!-- <div class="label-container">
@@ -368,11 +372,10 @@ $token = base64_encode(json_encode([
         
       </div>
        <?php if (isset($_SESSION['user_id'])): ?>
-            <a href="/payments/payment.php?country=georgia&visa_type=tourist_single/multiple"><button class="apply-button">Apply Now for $33 (₹2800+ ₹499)</button></a>
+            <a href="/payments/payment.php?country=indonesia&visa_type=tourist_01"><button class="apply-button">Apply Now for $38 (₹2800+ ₹499)</button></a>
         <?php else: ?>
-            <a href="/payments/payment.php?country=georgia&visa_type=tourist_single/multiple&redirect_to=/php/georgia.php"><button class="apply-button">Apply Now for $33 (₹2800 + ₹499)</button></a>
+            <a href="/payments/payment.php?country=indonesia&visa_type=tourist_01&redirect_to=/php/indonesia.php"><button class="apply-button">Apply Now for $38 (₹2800 + ₹499)</button></a>
         <?php endif; ?>
-      <a href="/payments/payment.php?country=indonensia&amount=3299"><button class="apply-button">Apply Now for $33 (₹2800 + ₹499)</button></a>
     </div>
 
 

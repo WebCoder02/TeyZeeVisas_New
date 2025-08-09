@@ -3,17 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>France Visa Checklist</title>
+    <title>Hungary Visa Checklist</title>
     <link rel="stylesheet" href="document.css">
     <link rel="stylesheet" href="Country_page.css">
     <link rel="stylesheet" href="styles.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
 </head>
 
 <body>
     <?php include 'header.php'; ?>
-    <!--Completed Revision 18th June 2025-->
-    <!--<header>
+    <?php
+// Start the session
+session_start();
+
+// Check if user is already logged in and has a valid session
+if (isset($_SESSION['user']) && isset($_SESSION['session_token'])) {
+    $email = $_SESSION['user'];
+    $sessionToken = $_SESSION['session_token'];
+    
+    // If using database-based authentication, verify the session
+    try {
+        require_once 'database.php';
+        require_once 'User.php';
+        
+        $database = new Database();
+        $db = $database->getConnection();
+        $user = new User($db);
+        
+        // Verify session is still valid
+        $sessionData = $user->validateSession($sessionToken);
+        if ($sessionData && $sessionData['email'] === $email) {
+            // User is logged in with valid session, redirect to payment
+            header('Location: payment.php');
+            exit;
+        } else {
+            // Invalid session, clear it
+            session_destroy();
+            session_start();
+        }
+    } catch (Exception $e) {
+        // Error checking session, clear it to be safe
+        session_destroy();
+        session_start();
+    }
+}
+
+// Handle success messages from login redirects
+$loginSuccess = isset($_GET['login']) && $_GET['login'] === 'success';
+$registrationSuccess = isset($_GET['registration']) && $_GET['registration'] === 'success';
+?>
+    <!-- <header>
         <div class="container header-container">
             <div class="logo">
                 <a href="https://www.teyzeevisas.com/">
@@ -24,197 +63,154 @@
             <div class="header-actions">
                 <a href="https://wa.me/919029027420" class="contact"><i class="fab fa-whatsapp"></i> Chat with us</a>
                 <a href="tel:+919029027420" class="contact"><i class="fas fa-phone"></i> Call Us</a>
-                <a href="#" class="login-btn">Login</a>
+                 <a href="#" class="login-btn">Login</a>
             </div>
         </div>
-    </header>-->
-    <h1>France Schengen Visa Checklist</h1>
+    </header> -->
+    <h1>Hungary Schengen Visa Checklist</h1>
 
     <div class="tab-container">
         <div class="tab">
             <button class="tablinks active" onclick="openTab(event, 'tourist')">Tourist Visa</button>
             <button class="tablinks" onclick="openTab(event, 'business')">Business Visa</button>
-            <button class="tablinks" onclick="openTab(event, 'student')">Student Visa</button>
             <button class="tablinks" onclick="openTab(event, 'additional')">Additional Information</button>
         </div>
 
         <div id="tourist" class="tabcontent active">
-            <h2>France Tourist Visa Checklist</h2>
+            <h2>Hungary Tourist Visa Checklist </h2>
             <table>
                 <tr>
                     <th width="30%">Documents</th>
                     <th width="70%">Description</th>
                 </tr>
                 <tr>
-                    <td>Original Passport</td>
-                    <td>With at least 2 blank pages valid for at least three months after the trip, issued in last 10
-                        years</td>
-                </tr>
-                <tr>
-                    <td>Copy of Passport Pages</td>
+                    <td>1</td>
                     <td>
-                        <ul>
-                            <li>Clear photocopy of passport first and last page</li>
-                            <li>All pages of your travel document containing visas, entry and exit stamps</li>
-                        </ul>
+                        Passport<br>
+                        • having at least 2 blank pages (without stamps)<br>
+                        • valid for at least 3 months after the expiry date of the requested visa / not older than 10 years<br>
+                        • non-Jordanian applicants must also provide a legal residence permit valid for at least 1 month after the return date of the intended trip
                     </td>
                 </tr>
                 <tr>
-                    <td>Photograph</td>
-                    <td>35mm x 45mm, with about 80% of your head and the top of your shoulders covering the photo, white
-                        background, taken in the last 6 months, teeth should not be visible, ears should be visible</td>
-                </tr>
-                <tr>
-                    <td>Application form</td>
-                    <td>Put your signature and carry it on the day of appointment
-                        <br>
-                        
-                        <?php if (isset($_SESSION['user_id'])): ?>
-                        <!-- Special links for logged-in users -->
-                        <a href="https://www.vfsglobal.com/denmark/pdf/application-for-schengen-visa_7e5a8e972b5146cf7a47be87a5be6cc02379d75cdb43bbe0183533f93287a741.pdf" class="doc-link-special">Download Application Form</a>
-                        <a href="https://www.welcometofrance.com/app/uploads/List-of-documents-to-be-submitted-with-an-application-for-a-short-stay-visa-1.pdf" class="doc-link-special">Download Document Checklist</a>
-                        <?php else: ?>
-                            <span class="special-doc">Login to see the Visa Application form and the Document Checklist.</span>
-                            <p>
-                                If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
-                                To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                 <!-- Eligibility Check -->
-                                <?php 
-                                $token = base64_encode(json_encode([
-                                    'country' => 'france',
-                                    'visa_type' => 'eligibility_check', 
-                                    'amount' => 499,
-                                    'timestamp' => time()
-                                ]));
-                                ?>
-                                <a href="/payments/payment.php?country=france&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
-                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
-                                After registration, you will receive your User ID and password on your registered Email ID.<br>
-                                If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/France_Customer.php" class="doc-link-special">Login</a>
-                            </p>
-                        <?php endif; ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Appointment slip</td>
-                    <td>This needs be carried on the day of appointment</td>
-                </tr>
-                <tr>
-                    <td>Flight tickets</td>
-                    <td>Confirmed roundtrip ticket. Also includes, Reservations for internal transfer within Schengen
-                        states (flight, train itinerary or car rental)</td>
-                </tr>
-                <tr>
-                    <td>Hotel Tickets</td>
-                    <td>Hotel bookings for complete stay in Schengen</td>
-                </tr>
-                <tr>
-                    <td>Cover Letter</td>
-                    <td>Mentioning the purpose of the trip and itinerary <a href="/templates/cover_letter_template.doc"
-                            class="doc-link" target="_blank">Download Template</a></td>
-                </tr>
-                <tr>
-                    <td>Travel Insurance</td>
-                    <td>Travel insurance covering not less than 30,000 Euros</td>
-                </tr>
-                <tr>
-                    <td>Bank statement</td>
-                    <td>Bank statements last 3 months, available balance should be at least 50-150 Euros per person per
-                        day of the trip. Advisable to transfer the money to maintain the balance 15 days before the
-                        appointment. Does not need to be signed by the bank</td>
-                </tr>
-                <tr>
-                    <td>ITR</td>
-                    <td>Copy of income tax return + ITR V acknowledgment of last 02 financial year if available</td>
-                </tr>
-                <tr>
-                    <td>Sponsor Bank Statement and ITR</td>
-                    <td>If trip sponsored by someone else, copy of bank statements last 3 months and copy of income tax
-                        return + ITR V acknowledgment for previous financial year (signed by bank)</td>
-                </tr>
-                <tr>
-                    <td>Sponsorship Letter</td>
-                    <td>If sponsored, letter from sponsor stating the amount, relationship and source of funds 
-                        <!-- <a
-                            href="/templates/sponsorship_letter_template.doc" class="doc-link" target="_blank">Download
-                            Template</a> -->
-                        </td>
-                </tr>
-                <tr>
-                    <td>Proof of occupation (If employed)</td>
-                    <td>Last 3 months salary slips, Employment contract, NOC from the employer and form 16 
-                        <!-- <a
-                            href="/templates/noc_from_employer.doc" class="doc-link" target="_blank">Download NOC
-                            Template</a> -->
-                        </td>
-                </tr>
-                <tr>
-                    <td>Proof of occupation (If self employed)</td>
-                    <td>GST certificate, Company registration proof, Company bank statement and company ITR</td>
-                </tr>
-                <tr>
-                    <td>Proof of occupation (If Retired)</td>
+                    <td>2</td>
                     <td>
-                        <ul>
-                            <li>Proof of Retirement</li>
-                            <li>Proof of regular income generated by ownership of property or business</li>
-                        </ul>
+                        Application form duly completed and signed<br>
+                        • full address of the host/hotel must be written in the application<br>
+                        • minors:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;• application form signed by both parents/legal representatives, copy of parent’s ID/passport<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;• if minor travels with one parent: signed authorization letter of the other parent duly legalised, copy of parent’s ID/passport<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;• if minor travels alone: both parents must provide a signed authorization duly legalised, copy of parent’s ID/passport
                     </td>
                 </tr>
                 <tr>
-                    <td>Marital status</td>
+                    <td>3</td>
                     <td>
-                        <ul>
-                            <li>If married, Marriage certificate</li>
-                            <li>If divorced, Divorce papers</li>
-                            <li>If single, Nothing required</li>
-                        </ul>
+                        One recent passport-size photo not older than 6 months<br>
+                        • Photographs must be clear, well-defined and taken against a plain white background without glasses
                     </td>
                 </tr>
                 <tr>
-                    <td>Minor documents</td>
-                    <td>Birth certificate, marksheet, consent letter from parents if minor is travelling alone or with
-                        only one parent</td>
+                    <td>4</td>
+                    <td>
+                        Travel insurance<br>
+                        • covering all Schengen countries, for a minimum coverage of EUR 30.000
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        Round-trip flight ticket reservations<br>
+                        • no confirmed booking requested
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        Hotel booking / proof of accommodation<br>
+                        • in case of staying in inviting person’s accommodation or a rented apartment, approval of landlord + passport/ID copy of landlord
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Employment letter / proof of business ownership (official English translation)</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Companies certificate of registration (official English translation)</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>For students: school / university letter of enrolment (official English translation)</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Family booklet (if applicable, with official English translation)</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>
+                        Business Invitation<br>
+                        • company, conference, cultural, sport events invitation letters, etc…<br>
+                        • full address, postal code, phone number, email address of inviting entity<br>
+                        • name of inviting person / signature and date of invitation<br>
+                        • expense and cost sponsor, if applicable<br>
+        
+                        Invitation from a family member/friend<br>
+                        • preferably official invitation letter obtained from Directorate-General for Aliens Policing / OR the following:<br>
+                        • ID/passport of the inviting family member or friend<br>
+                        • copy of lease contract AND approval letter from the landlord AND passport/ID copy of landlord<br>
+                        • copy of residency in Hungary / copy of address card<br>
+                        • copy of university ID / active student status / letter of acceptance / letter of award (Only required from students studying in Hungary)<br>
+        
+                        Inviting person is a holder of a Hungarian Passport<br>
+                        • official invitation letter obtained from Directorate-General for Aliens Policing<br>
+                        • ID/passport of the inviting family member or friend<br>
+                        • proof of accommodation / copy of lease contract / approval letter from the landlord and passport/ID copy of landlord<br>
+        
+                        Medical Invitation<br>
+                        • medical report from Jordan<br>
+                        • medical invitation from Hungary / doctor / hospital
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Proof of family/financial ties to home country</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>
+                        Proof of finance for all costs relating to the trip<br>
+                        • e.g. signed letter of guarantee<br>
+                        • Signed ID/passport copy of person financially responsible for the trip
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Bank statement<br>• original, from the last 6 months (in English)</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Copies of previous Schengen visas or any other visas (If applicable)</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>
+                        Notes<br>
+                        • All documents must preferably be presented in ORIGINAL, preferably in English. If applicable, the originals are handed back to applicant after check of conformity of original and copy.<br>
+                        • Applications have to be submitted at least 14 working days before the expected date of departure.<br>
+                        • The Embassy of Hungary has the right at any time to ask for further supporting documents and/or call the applicant for an interview.
+                    </td>
                 </tr>
             </table>
         </div>
 
         <div id="business" class="tabcontent">
-            <h2>France Business Visa Checklist</h2>
+            <h2>Hungary Business Visa Checklist</h2>
             <table>
                 <tr>
                     <th width="30%">Document</th>
                     <th width="70%">Description</th>
-                </tr>
-                <tr>
-                    <td>Official Document Links </td>
-                    <td>
-                        <?php if (isset($_SESSION['user_id'])): ?>
-                        <!-- Special links for logged-in users -->
-                        <a href="https://france-visas.gouv.fr/en/india" class="doc-link-special">Download Application Form</a>
-                        <a href="https://france-visas.gouv.fr/documents/d/france-visas/fv_com_tutoriel_portugais" class="doc-link-special">Download Document Checklist</a>
-                        <?php else: ?>
-                        <span class="special-doc">Login to see the Business Visa Application form and the Document Checklist.</span>
-                            <p>
-                                If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
-                                To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                 <!-- Eligibility Check -->
-                                <?php 
-                                $token = base64_encode(json_encode([
-                                    'country' => 'france',
-                                    'visa_type' => 'eligibility_check', 
-                                    'amount' => 499,
-                                    'timestamp' => time()
-                                ]));
-                                ?>
-                                <a href="/payments/payment.php?country=france&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
-                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
-                                After registration, you will receive your User ID and password on your registered Email ID.<br>
-                                If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/France_Customer.php" class="doc-link-special">Login</a>
-                            </p>
-                        <?php endif; ?></td>
                 </tr>
                 <tr>
                     <td>Original Passport</td>
@@ -254,8 +250,8 @@
                 </tr>
                 <tr>
                     <td>Proof of occupation (If employed)</td>
-                    <td>Last 3 months salary slips, Employment contract, NOC from the employer and form 16
-                         <!-- <a
+                    <td>Last 3 months salary slips, Employment contract, NOC from the employer and form 16 
+                        <!-- <a
                             href="/templates/noc_from_employer.doc" class="doc-link" target="_blank">Download NOC
                             Template</a> -->
                         </td>
@@ -298,7 +294,7 @@
                 <tr>
                     <td>Company Cover letter</td>
                     <td>Introduction letter by Indian company on a company letterhead mentioning purpose of visit and
-                        relationship between the Indian and the French company 
+                        relationship between the Indian and  company 
                         <!-- <a href="/templates/company_cover_letter.doc"
                             class="doc-link" target="_blank">Download Template</a> -->
                         </td>
@@ -318,38 +314,12 @@
                             href="/templates/company_sponsorship_letter.doc" class="doc-link" target="_blank">Download
                             Template</a> -->
                         </td>
+                    
                 </tr>
             </table>
         </div>
 
-        <div id="student" class="tabcontent">
-            <h2>France Student Visa Checklist</h2>
-            <table>
-                <tr>
-                    <th width="30%">Document</th>
-                    <th width="70%">Description</th>
-                </tr>
-                <tr><td>Passport</td><td>Valid at least 6 months beyond intended stay; two blank pages recommended.</td></tr>
-                <tr><td>Campus France Registration</td><td>Online file number (IN) and interview confirmation from Campus France India.</td></tr>
-                <tr><td>Admission Letter</td><td>Official acceptance from a French educational institution.</td></tr>
-                <tr><td>Visa Application Form</td><td>Long‑Stay Student Visa form, printed, signed and dated.</td></tr>
-                <tr><td>Photos</td><td>Two recent passport-style colour photos (35×45 mm; biometric guidelines).</td></tr>
-                <tr><td>Academic Records</td><td>Transcripts and diplomas from previous studies (10th grade onward).</td></tr>
-                <tr><td>Curriculum Vitae</td><td>Résumé detailing education and experience.</td></tr>
-                <tr><td>Motivation Letter</td><td>Personal cover letter explaining your study goals and choice of program.</td></tr>
-                <tr><td>Proof of Funds</td><td>Bank statements, ITRs or sponsor documents showing ≥ €615/month plus tuition fee proof.</td></tr>
-                <tr><td>Accommodation Proof</td><td>Rental agreement, student housing confirmation, or host invitation with address.</td></tr>
-                <tr><td>Insurance</td><td>Medical/travel insurance covering at least €30,000 for emergencies and repatriation.</td></tr>
-                <tr><td>Flight & Travel Plan</td><td>Flight reservation for short stays or proposed travel itinerary.</td></tr>
-                <tr><td>Health Declaration (OFII)</td><td>Completed OFII form if required upon arrival in France.</td></tr>
-                <tr><td>Visa Fee</td><td>Paid at VFS/Consulate during submission.</td></tr>
-                <tr><td>Biometrics</td><td>Fingerprint scan and photo at Visa Application Centre (age ≥12).</td></tr>
-                <tr><td>Translations</td><td>Documents not in English or French translated and certified.</td></tr>
-            </table>
-         </div>
-
-        <div id="additional" class="tabcontent"><h2>This Information is available only to users who have logged in.</h2>            
-         <?php if (isset($_SESSION['user_id'])): ?>
+        <div id="additional" class="tabcontent"><h2>This Information is available only to users who have logged in.</h2>             <?php if (isset($_SESSION['user_id'])): ?>
                         <!-- Special links for logged-in users -->
             <h2>Additional Information Required</h2>
             <table>
@@ -359,16 +329,16 @@
                 </tr>
                 <tr>
                     <td>Are you visiting any other Schengen countries during your stay?</td>
-                    <td>Check list of Schengen countries: Austria, Belgium, Czech Republic, Croatia, Denmark, Estonia,
-                        Finland, France, Germany, Greece, Hungary, Iceland, Italy, Latvia, Liechtenstein, Lithuania,
-                        Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Slovakia, Slovenia, Spain, Sweden, and
+                    <td>Check list of Schengen countries: Hungary, Hungary, Hungary, Croatia, Hungary, Hungary,
+                        Hungary, France, Germany, Greece, Hungary, Iceland, Italy, Latvia, Liechtenstein, Lithuania,
+                        Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Slovakia, Slovenia, Spain, Hungary, and
                         Switzerland.</td>
                 </tr>
                 <tr>
                     <td>What is your first country of entry?</td>
-                    <td>Check list of Schengen countries: Austria, Belgium, Czech Republic, Croatia, Denmark, Estonia,
-                        Finland, France, Germany, Greece, Hungary, Iceland, Italy, Latvia, Liechtenstein, Lithuania,
-                        Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Slovakia, Slovenia, Spain, Sweden, and
+                    <td>Check list of Schengen countries: Hungary, Hungary, Hungary, Croatia, Hungary, Hungary,
+                        Hungary, France, Germany, Greece, Hungary, Iceland, Italy, Latvia, Liechtenstein, Lithuania,
+                        Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Slovakia, Slovenia, Spain, Hungary, and
                         Switzerland.</td>
                 </tr>
                 <tr>
@@ -417,17 +387,16 @@
                     </td>
                 </tr>
             </table>
-            <?php endif;?>
         </div>
-    </div> 
+    </div>
 
     <div class="note">
-        <strong>Note:</strong> This checklist is provided for informational purposes only. Requirements may change, so
-        it's recommended to verify the current requirements with the  embassy or consulate in your country before
-        applying.
+        <strong>Note:</strong><p style="text-align:justify; text-indent: 5%">Above information is compiled by TeyZee Visas team on a best effort basis. While every attempt is made for accuracy, we are not responsible for any errors or delayed updates.  Official link for checklist is as follows <a href="https://www.vfsglobal.com/hungary/uk/pdf/Vizumkerdoiv_151223.pdf">Click Here</a> </p> <br>
+        <p style="text-align:justify; text-indent: 5%">This checklist is provided for informational purposes only. Requirements may change, so it's recommended to verify the current requirements with the Embassy of Hungary or consulate in your country before
+        applying.</p>
     </div>
-    <?php include 'footer.php'; ?>
 
+    <?php include 'footer.php'; ?>
     <!-- <footer>
         <div class="container">
             <div class="footer-grid">
@@ -455,7 +424,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col">
+                 <div class="footer-col">
                     <h3>Refund policy</h3>
                     <ul>
                         <li><a href="#">Pricing</a></li>
@@ -470,7 +439,7 @@
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Careers</a></li>
                     </ul>
-                </div>
+                </div> 
                 <div class="footer-col">
                     <h3>Support</h3>
                     <ul>
@@ -597,7 +566,7 @@
                     const templateName = templatePath.replace('.doc', '').replace(/_/g, ' ');
 
 
-                    const message = `Kindly provide the latest ${templateName} for my visa application. In case you have not paid TeyZee Visa Fees, please make the visa service fees payment and get the receipt number. Link to Visa Fees Page for France - https://teyzee.com/france.php; please type the 7 digit receipt no in your next whatsapp message to us`;
+                    const message = `Kindly provide the latest ${templateName} for my visa application. In case you have not paid TeyZee Visa Fees, please make the visa service fees payment and get the receipt number. Link to Visa Fees Page for Hungary- https://teyzee.com/France-visa-fees; please type the 7 digit receipt no in your next whatsapp message to us`;
 
 
                     const encodedMessage = encodeURIComponent(message);

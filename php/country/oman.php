@@ -92,7 +92,19 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=oman&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+                <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'oman',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));  ?> <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=oman&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/oman.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=oman&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -100,7 +112,11 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/Oman_Customer.php" class="check-btn">Download Documents</a>
+                <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/Oman_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=oman&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!-- <div class="label-container">
@@ -352,7 +368,11 @@
         <div><strong>Length of Stay:</strong> Up to 10 days</div>
         
       </div>
-      <a href="/payments/payment.php?country=oman&amount=3099"><button class="apply-button">Apply Now for $36.10 (₹2600 + ₹499)</button></a>
+      <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=oman&visa_type=tourist_01"><button class="apply-button">Apply Now for $36.10 (₹2600 + ₹499)</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=oman&visa_type=tourist_01&redirect_to=/php/oman.php"><button class="apply-button">Apply Now for $36.10 (₹2600 + ₹499)</button></a>
+                    <?php endif; ?>
     </div>
 
     <div class="visa-cards">
@@ -363,7 +383,11 @@
         <div><strong>Visa Duration:</strong> 90 days from issue</div>
         <div><strong>Length of Stay:</strong> Up to 30 days</div>
       </div>
-      <a href="/payments/payment.php?country=oman&amount=7499"><button class="apply-button">Apply Now for $87.34 (₹6999 + ₹499) </button></a>
+      <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=oman&visa_type=tourist_02"><button class="apply-button">Apply Now for $87.34 (₹6999 + ₹499)</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=oman&visa_type=tourist_02&redirect_to=/php/oman.php"><button class="apply-button">Apply Now for $87.34 (₹6999 + ₹499)</button></a>
+                    <?php endif; ?>
     </div>
 
 

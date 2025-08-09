@@ -105,7 +105,22 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=brazil&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+               <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'brazil',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));
+?>
+                <!-- ✅ FIXED: Eligibility Check Payment Link -->
+                <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=brazil&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/brazil.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=brazil&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -113,7 +128,11 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/Brazil_Customer.php" class="check-btn">Download Documents</a>
+                            <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/Brazil_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=brazil&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!--<div class="label-container">
@@ -364,7 +383,11 @@
         <div><strong>Visa Duration:</strong> 5 years from issue</div>
         <div><strong>Length of Stay:</strong> Up to 90 days</div>
       </div>
-      <a href="/payments/payment.php?country=brazil&amount=7459"><button class="apply-button">Apply Now @ $80.90 (₹6,960+₹499 )</button></a>
+      <?php if (isset($_SESSION['user_id'])): ?>
+            <a href="/payments/payment.php?country=brazil&visa_type=tourist_multiple"><button class="apply-button">Apply Now for $80.90 (₹6960 + ₹499)</button></a>
+        <?php else: ?>
+            <a href="/payments/payment.php?country=brazil&visa_type=tourist_multiple&redirect_to=/php/brazil.php"><button class="apply-button">Apply Now for $80.90 (₹6960 + ₹499)</button></a>
+        <?php endif; ?>
     </div>
 
   </div>

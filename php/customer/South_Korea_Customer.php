@@ -56,9 +56,18 @@
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
-                                To <strong>Register</strong>, please click the Check Eligibility button:<br>
+                                To <strong>Register</strong>, please click the Check Eligibility button:<br><!-- Eligibility Check -->
+                                <?php 
+                                $token = base64_encode(json_encode([
+                                    'country' => 'south_korea',
+                                    'visa_type' => 'eligibility_check', 
+                                    'amount' => 499,
+                                    'timestamp' => time()
+                                ]));
+                                ?>
+                                <a href="/payments/payment.php?country=south_korea&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
                                 <a href="/php/payment.php?country=South_Korea_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
-                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
                                 <a href="/php/login.php?country=South_Korea_Customer" class="doc-link">Login</a>
@@ -94,9 +103,18 @@
                             <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
-                                To <strong>Register</strong>, please click the Check Eligibility button:<br>
+                                To <strong>Register</strong>, please click the Check Eligibility button:<br><!-- Eligibility Check -->
+                                <?php 
+                                $token = base64_encode(json_encode([
+                                    'country' => 'south_korea',
+                                    'visa_type' => 'eligibility_check', 
+                                    'amount' => 499,
+                                    'timestamp' => time()
+                                ]));
+                                ?>
+                                <a href="/payments/payment.php?country=south_korea&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
                                 <a href="/php/payment.php?country=South_Korea_Customer&amount=499" class="doc-link">Check Eligibility</a><br>
-                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
                                 <a href="/php/login.php?country=South_Korea_Customer" class="doc-link">Login</a>

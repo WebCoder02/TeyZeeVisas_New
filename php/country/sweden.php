@@ -99,15 +99,14 @@ $token = base64_encode(json_encode([
     'visa_type' => 'eligibility_check', 
     'amount' => 499,
     'timestamp' => time()
-]));
-?>
-                <!-- ✅ FIXED: Eligibility Check Payment Link -->
-                <?php if (isset($_SESSION['user_id'])): ?>
+]));  ?> 
+<?php if (isset($_SESSION['user_id'])): ?>
     <a href="/payments/payment.php?country=sweden&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
 <?php else: ?>
     <p><small>Please <a href="/php/login.php?redirect_to=/php/sweden.php" class="login-link">login</a> to proceed with payment</small></p>
     <a href="/payments/payment.php?country=sweden&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
 <?php endif; ?>
+
             </div>
         </div>
     </section>
@@ -115,12 +114,12 @@ $token = base64_encode(json_encode([
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                 <!-- ✅ FIXED: Document Download Link -->
+                <!-- ✅ FIXED: Document Download Link -->
                <?php if (isset($_SESSION['user_id'])): ?>
     <a href="../php/Sweden_Customer.php" class="check-btn">Download Documents</a>
 <?php else: ?>
     <a href="/payments/payment.php?country=sweden&visa_type=eligibility_check" class="check-btn">Download Documents</a>
-<?php endif; ?>                
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!-- <div class="label-container">

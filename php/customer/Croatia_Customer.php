@@ -64,16 +64,14 @@
                                  <!-- Eligibility Check -->
                                 <?php 
                                 $token = base64_encode(json_encode([
-                                    'country' => 'france',
+                                    'country' => 'croatia',
                                     'visa_type' => 'eligibility_check', 
                                     'amount' => 499,
                                     'timestamp' => time()
                                 ]));
                                 ?>
-                                <a href="/payments/secure-checkout.php?token=<?php echo $token; ?>">
-                                    <button class="doc-link-special">Check Eligibility - Pay ₹499</button>
-                                </a>
-                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                <a href="/payments/payment.php?country=croatia&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
+                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
                                 <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Croatia_Customer.php" class="doc-link-special">Login</a>
@@ -189,16 +187,14 @@
                                  <!-- Eligibility Check -->
                                 <?php 
                                 $token = base64_encode(json_encode([
-                                    'country' => 'france',
+                                    'country' => 'croatia',
                                     'visa_type' => 'eligibility_check', 
                                     'amount' => 499,
                                     'timestamp' => time()
                                 ]));
                                 ?>
-                                <a href="/payments/secure-checkout.php?token=<?php echo $token; ?>">
-                                    <button class="doc-link-special">Check Eligibility - Pay ₹499</button>
-                                </a>
-                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                <a href="/payments/payment.php?country=croatia&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
+                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
                                 <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Croatia_Customer.php" class="doc-link-special">Login</a>

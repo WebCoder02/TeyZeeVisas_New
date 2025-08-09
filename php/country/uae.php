@@ -92,7 +92,19 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=uae&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+                <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'uae',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));  ?> <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=uae&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/uae.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=uae&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -100,7 +112,12 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/UAE_Customer.php" class="check-btn">Download Documents</a>
+                <!-- ✅ FIXED: Document Download Link -->
+               <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/UAE_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=uae&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!-- <div class="label-container">
@@ -352,7 +369,11 @@
         <div><strong>Length of Stay:</strong> 48 hours</div>
         
       </div>
-      <a href="/payments/payment.php?country=uae&amount=1359"><button class="apply-button">Apply Now for $10 (+₹499)</button></a>
+      <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=uae&visa_type=tourist_01"><button class="apply-button">Apply Now for $10 (+₹499)</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uae&visa_type=tourist_01&redirect_to=/php/uae.php"><button class="apply-button">Apply Now for $10 (+₹499)</button></a>
+                    <?php endif; ?>
     </div>
 
     <div class="visa-cards">
@@ -364,7 +385,11 @@
         <div><strong>Length of Stay:</strong> Up to 96 hours</div>
         
       </div>
-      <a href="/payments/payment.php?country=uae&amount=4709"><button class="apply-button">Apply Now for $49 (+₹499)</button></a>
+      <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=uae&visa_type=tourist_02"><button class="apply-button">Apply Now for $49 (+₹499)</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uae&visa_type=tourist_02&redirect_to=/php/uae.php"><button class="apply-button">Apply Now for $49 (+₹499)</button></a>
+                    <?php endif; ?>
       </div>
 
 
@@ -415,7 +440,11 @@
                         <h3>$90 per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=uae&amount=8239"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=uae&visa_type=tourist_03"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uae&visa_type=tourist_03&redirect_to=/php/uae.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
             
@@ -459,7 +488,11 @@
                         <small>+₹499 Plus Tax</small>
                         <h3>$136 per adult</h3>
                     </div>
-                    <a href="/payments/payment.php?country=uae&amount=12199"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=uae&visa_type=tourist_04"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uae&visa_type=tourist_04&redirect_to=/php/uae.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -503,7 +536,11 @@
                         <h3>$177 per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=uae&amount=15719"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=uae&visa_type=tourist_05"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=uae&visa_type=tourist_05&redirect_to=/php/uae.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -547,7 +584,11 @@
                         <h3>$231 per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=uae&amount=19359"><button class="start-btn">Apply Now</button></a>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=uae&visa_type=tourist_06"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?> 
+                        <a href="/payments/payment.php?country=uae&visa_type=tourist_06&redirect_to=/php/uae.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 

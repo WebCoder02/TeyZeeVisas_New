@@ -57,9 +57,17 @@
                         <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
-                                To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="https://teyzeevisas.com/php/payment.php?country=Ireland_Customer&amount=499" class="doc-link-special">Check Eligibility</a><br>
-                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                To <strong>Register</strong>, please click the Check Eligibility button:<br><!-- Eligibility Check -->
+                                <?php 
+                                $token = base64_encode(json_encode([
+                                    'country' => 'ireland',
+                                    'visa_type' => 'eligibility_check', 
+                                    'amount' => 499,
+                                    'timestamp' => time()
+                                ]));
+                                ?>
+                                <a href="/payments/payment.php?country=ireland&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
+                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
                                 <a href="https://teyzeevisas.com/php/login.php?country=Ireland_Customer" class="doc-link-special">Login</a>
@@ -132,9 +140,17 @@
                             <?php else: ?>
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
-                                To <strong>Register</strong>, please click the Check Eligibility button:<br>
-                                <a href="https://teyzeevisas.com/php/payment.php?country=Ireland_Customer&amount=499" class="doc-link-special">Check Eligibility</a><br>
-                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                To <strong>Register</strong>, please click the Check Eligibility button:<br><!-- Eligibility Check -->
+                                <?php 
+                                $token = base64_encode(json_encode([
+                                    'country' => 'ireland',
+                                    'visa_type' => 'eligibility_check', 
+                                    'amount' => 499,
+                                    'timestamp' => time()
+                                ]));
+                                ?>
+                                <a href="/payments/payment.php?country=ireland&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
+                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
                                 <a href="https://teyzeevisas.com/php/login.php?country=Ireland_Customer" class="doc-link-special">Login</a>

@@ -62,16 +62,14 @@
                                  <!-- Eligibility Check -->
                                 <?php 
                                 $token = base64_encode(json_encode([
-                                    'country' => 'france',
+                                    'country' => 'spain',
                                     'visa_type' => 'eligibility_check', 
                                     'amount' => 499,
                                     'timestamp' => time()
                                 ]));
                                 ?>
-                                <a href="/payments/secure-checkout.php?token=<?php echo $token; ?>">
-                                    <button class="doc-link-special">Check Eligibility - Pay ₹499</button>
-                                </a>
-                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                <a href="/payments/payment.php?country=spain&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
+                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
                                 <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Spain_Customer.php" class="doc-link-special">Login</a>
@@ -151,7 +149,7 @@
                         • Must declare rejection if rejected in any country in last 10 years and mention rejection year and category of visa of Rejected country.<br>
                         • All applicants have to pay visa fees, VFS charge & courier charge in cash at local VFS-centre.<br>
                         • If passenger is having passport with any observation regarding Data page then Affidavit and Paper advertisement in English are mandatory<br>
-                        • All documents must be in A4 size and English.<br><br>
+                        • All documents must be in A4 size and English.<br>
                         <strong>In case of travel to more than one Schengen country:</strong> please submit your application to the Embassy / Consulate where you will be staying for the maximum number of days. In case of equal stay, one has to apply at the Schengen country which is the first port of entry.
                     </td>
                 </tr>
@@ -180,16 +178,14 @@
                                  <!-- Eligibility Check -->
                                 <?php 
                                 $token = base64_encode(json_encode([
-                                    'country' => 'france',
+                                    'country' => 'spain',
                                     'visa_type' => 'eligibility_check', 
                                     'amount' => 499,
                                     'timestamp' => time()
                                 ]));
                                 ?>
-                                <a href="/payments/secure-checkout.php?token=<?php echo $token; ?>">
-                                    <button class="doc-link-special">Check Eligibility - Pay ₹499</button>
-                                </a>
-                                Pay ₹499 to check your visa eligibility and get free registration.<br>
+                                <a href="/payments/payment.php?country=spain&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
+                                <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
                                 <a href="https://www.teyzeevisas.com/php/login.php?redirect_to=/php/Spain_Customer.php" class="doc-link-special">Login</a>

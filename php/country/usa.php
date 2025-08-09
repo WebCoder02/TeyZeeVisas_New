@@ -90,7 +90,19 @@
             <div class="eligibility-content">
                 <h2>Check your Visa Eligibility for 499 Rs only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day</p>
-                <a href="/payments/payment.php?country=usa&amount=499"><button class="check-btn">Check Eligibility - Pay ₹499</button></a>
+                <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'usa',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));  ?> <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=usa&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/usa.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=usa&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -98,7 +110,12 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/USA_Customer.php" class="check-btn">Download Documents</a>
+                <!-- ✅ FIXED: Document Download Link -->
+               <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/USA_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=usa&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
             <!-- <div class="label-container">
@@ -379,7 +396,11 @@
                         <h3>$185 per adult</h3>
                         <!-- <a href="#">View details</a> -->
                     </div>
-                    <a href="/payments/payment.php?country=usa&amount=19499"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=usa&visa_type=business_01"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=usa&visa_type=business_01&redirect_to=/php/usa.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -422,7 +443,11 @@
                         <small>+₹3500 Plus Tax</small>
                         <h3>$425 per adult</h3>
                     </div>
-                    <a href="/payments/payment.php?country=usa&amount=39999"><button class="start-btn">Apply Now</button></a>
+                     <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="/payments/payment.php?country=usa&visa_type=business_02"><button class="start-btn">Apply Now</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=usa&visa_type=business_02&redirect_to=/php/usa.php"><button class="start-btn">Apply Now</button></a>
+                    <?php endif; ?>
                 </div>
             </div>
 

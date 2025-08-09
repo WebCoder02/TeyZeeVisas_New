@@ -94,7 +94,19 @@
             <div class="eligibility-content">
                 <h2>Check Your Visa Eligibilty for Rs 499 only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day..</p>
-                <a href="/payments/payment.php?country=singapore&amount=499"><button class="check-btn">Check Eligibility - Pay Rs 499</button></a>
+                <!-- Eligibility Check -->
+<?php 
+$token = base64_encode(json_encode([
+    'country' => 'singapore',
+    'visa_type' => 'eligibility_check', 
+    'amount' => 499,
+    'timestamp' => time()
+]));  ?> <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="/payments/payment.php?country=singapore&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php else: ?>
+    <p><small>Please <a href="/php/login.php?redirect_to=/php/singapore.php" class="login-link">login</a> to proceed with payment</small></p>
+    <a href="/payments/payment.php?country=singapore&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+<?php endif; ?>
             </div>
         </div>
     </section>
@@ -102,7 +114,12 @@
         <div class="container">
              <div class="label-container">
                 <h2>Save time and hassle - Check Visa Eligibility @ ₹499</h2>
-                <a href="/php/Singapore_Customer.php" class="check-btn">Download Documents</a>
+                 <!-- ✅ FIXED: Document Download Link -->
+               <?php if (isset($_SESSION['user_id'])): ?>
+    <a href="../php/Singapore_Customer.php" class="check-btn">Download Documents</a>
+<?php else: ?>
+    <a href="/payments/payment.php?country=singapore&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+<?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
 
@@ -349,7 +366,11 @@
         <div><strong>Visa Duration:</strong> 90 days from issue</div>
         <div><strong>Length of Stay:</strong> Up to 96 hours</div>
       </div>
-      <a href="/payments/payment.php?country=singapore&amount=3079"><button class="apply-button">Apply Now for $30 (2580+₹499) </button></a>
+      <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="/payments/payment.php?country=singapore&visa_type=tourist_01"><button class="apply-button">Apply Now for $30 (2580+₹499)</button></a>
+                    <?php else: ?>
+                        <a href="/payments/payment.php?country=singapore&visa_type=tourist_01&redirect_to=/php/singapore.php"><button class="apply-button">Apply Now for $30 (2580+₹499)</button></a>
+                    <?php endif; ?>
     </div>
 
 
