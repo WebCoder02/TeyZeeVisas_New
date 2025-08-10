@@ -58,7 +58,7 @@
                                 <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Uzbekistan_Customer" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=Uzbekistan_Customer" class="doc-link-special">Login</a>
                             </p>
                         <?php endif; ?></td></tr>
                 <tr><td>Passport</td><td>Indian passport valid for at least 6 months beyond date of entry with at least one blank page.</td></tr>
@@ -98,7 +98,7 @@
                                 <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Uzbekistan_Customer" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=Uzbekistan_Customer" class="doc-link-special">Login</a>
                             </p>
                             <?php endif; ?></td>
                     </tr>

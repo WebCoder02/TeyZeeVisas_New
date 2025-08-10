@@ -61,7 +61,7 @@
                                 <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Malaysia_Customer" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=Malaysia_Customer" class="doc-link-special">Login</a>
                             </p>
                         <?php endif; ?>
                     </td>
@@ -125,7 +125,7 @@
                                 <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
-                                <a href="/php/login.php?country=Malaysia_Customer" class="doc-link">Login</a>
+                                <a href="/php/login.php?country=Malaysia_Customer" class="doc-link-special">Login</a>
                             </p>
                             <?php endif; ?></td>
                     </tr>
