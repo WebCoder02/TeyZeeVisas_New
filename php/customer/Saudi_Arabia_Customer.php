@@ -59,15 +59,8 @@
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br><!-- Eligibility Check -->
-                                <?php 
-                                $token = base64_encode(json_encode([
-                                    'country' => 'saudi_arabia',
-                                    'visa_type' => 'eligibility_check', 
-                                    'amount' => 499,
-                                    'timestamp' => time()
-                                ]));
-                                ?>
-                                <a href="/payments/payment.php?country=saudi_arabia&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
+                               
+                                <a href="https://www.teyzeevisas.com/php/check_now.php"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
                                 <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>
@@ -109,15 +102,8 @@
                             <p>
                                 If you have not registered on TeyzeeVisas, please <strong>Register Now</strong>.<br>
                                 To <strong>Register</strong>, please click the Check Eligibility button:<br><!-- Eligibility Check -->
-                                <?php 
-                                $token = base64_encode(json_encode([
-                                    'country' => 'saudi_arabia',
-                                    'visa_type' => 'eligibility_check', 
-                                    'amount' => 499,
-                                    'timestamp' => time()
-                                ]));
-                                ?>
-                                <a href="/payments/payment.php?country=saudi_arabia&visa_type=eligibility_check"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
+                                
+                                <a href="https://www.teyzeevisas.com/php/check_now.php"><button id="check-now" class="doc-link-special">Check Eligibility - Pay ₹499</button></a>
                                 <br>Pay ₹499 to check your visa eligibility and get free registration.<br>
                                 After registration, you will receive your User ID and password on your registered Email ID.<br>
                                 If you have already registered on TeyzeeVisas, please login:<br>

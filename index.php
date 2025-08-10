@@ -101,6 +101,7 @@ $registrationSuccess = isset($_GET['registration']) && $_GET['registration'] ===
     </section>
 </main>
 <body>
+    <div class="gcse-search"></div>
     <section class="featured-destinations">
             <div class="container">
                 <div class="destinations-grid">
@@ -358,7 +359,7 @@ $registrationSuccess = isset($_GET['registration']) && $_GET['registration'] ===
                     <div class="step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h4>Pay Rs 500 ON UPI for evaluation. <br>On Go ahead, upload all documents to Dropbox</h4>
+                            <h4>Pay Rs 499 ON UPI for evaluation. <br>On Go ahead, upload all documents to Dropbox</h4>
                             <p>Documentation check in 12 hours</p>
                         </div>
                     </div>
@@ -377,14 +378,16 @@ $registrationSuccess = isset($_GET['registration']) && $_GET['registration'] ===
     <section class="visa-eligibility">
         <div class="container eligibility-container">
             <div class="eligibility-content">
-                <h2>Check your Visa Eligibility for Rs 500 only</h2>
+                <h2>Check your Visa Eligibility for Rs 499 only</h2>
                 <p>Upload your basic documents now.</p>
-             <a href="/payments/payment.php?country=All&amount=499"><button class="check-btn">Check Now</button></a>
+             <a href="https://www.teyzeevisas.com/php/check_now.php"><button class="check-btn">Check Now</button></a>
                <!-- <button id="check-btn2" class="check-btn">CHECK NOW</button> -->
                 <!-- <button class="check-btn">CHECK NOW</button> -->
             </div>
         </div>
     </section>
+    <script async src="https://cse.google.com/cse.js?cx=b469c5514db4d4585">
+    </script>
      <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq4e31759c72faf117d54e41692276fce110fbe6e6e6d715a6aaac7a0c47204f0c" defer></script> 
 </body>
 

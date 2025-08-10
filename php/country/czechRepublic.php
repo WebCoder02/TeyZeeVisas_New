@@ -81,7 +81,7 @@
                 <img src="../VisaImages/destinations/czechRepublic.jpg" alt="Czech Republic">
                 <div class="testimonial">
                     <img src="../VisaImages/destinations/singapore.jpg" alt="Eiffel Tower">
-                    <p>"Teyzee Visas has been doing our coporate visas since decades, so naturally we asked them to do
+                    <p>"Teyzee Visas has been doing our corporate visas since decades, so naturally we asked them to do
                         our personal visas as well. Flawless service.👍"</p>
                 </div>
             </div>
@@ -93,21 +93,14 @@
                 <h2>Check your Visa Eligibility for 499 Rs only</h2>
                 <p>Upload Your Visa Documents after Payment & Get Visa Eligibilty report in 1 working day</p>
                <!-- Eligibility Check -->
-<?php 
-$token = base64_encode(json_encode([
-    'country' => 'czechRepublic',
-    'visa_type' => 'eligibility_check', 
-    'amount' => 499,
-    'timestamp' => time()
-]));
-?>
-                <!-- ✅ FIXED: Eligibility Check Payment Link -->
-                <?php if (isset($_SESSION['user_id'])): ?>
-    <a href="/payments/payment.php?country=czechRepublic&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
-<?php else: ?>
-    <p><small>Please <a href="/php/login.php?redirect_to=/php/czechRepublic.php" class="login-link">login</a> to proceed with payment</small></p>
-    <a href="/payments/payment.php?country=czechRepublic&visa_type=eligibility_check"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
-<?php endif; ?>
+               <?php if(isset($_SESSION['user_id'])): ?>
+    <a href="https://www.teyzeevisas.com/php/check_now.php"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+    <?php else: ?>
+    <p>Please proceed with payment and receive the login details on email</p>   
+    <a href="https://www.teyzeevisas.com/php/check_now.php"><button id="check-now" class="check-btn">Check Eligibility - Pay ₹499</button></a>
+
+                <?php endif; ?> 
+
             </div>
         </div>
     </section>
@@ -119,7 +112,7 @@ $token = base64_encode(json_encode([
                <?php if (isset($_SESSION['user_id'])): ?>
     <a href="../php/CzechRepublic_Customer.php" class="check-btn">Download Documents</a>
 <?php else: ?>
-    <a href="/payments/payment.php?country=czechRepublic&visa_type=eligibility_check" class="check-btn">Download Documents</a>
+    <a href="https://www.teyzeevisas.com/php/check_now.php" class="check-btn">Download Documents</a>
 <?php endif; ?>
                 <h3>Get Access to Original Visa Form and Checklist</h3>
             </div>
