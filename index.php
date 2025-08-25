@@ -101,7 +101,6 @@ $registrationSuccess = isset($_GET['registration']) && $_GET['registration'] ===
     </section>
 </main>
 <body>
-    <div class="gcse-search"></div>
     <section class="featured-destinations">
             <div class="container">
                 <div class="destinations-grid">
@@ -386,8 +385,6 @@ $registrationSuccess = isset($_GET['registration']) && $_GET['registration'] ===
             </div>
         </div>
     </section>
-    <script async src="https://cse.google.com/cse.js?cx=b469c5514db4d4585">
-    </script>
      <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq4e31759c72faf117d54e41692276fce110fbe6e6e6d715a6aaac7a0c47204f0c" defer></script> 
 </body>
 
